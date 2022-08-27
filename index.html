@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+      <div id="title">
+        <h3>Password Generator</h3>
+      </div>
+
+      <div id="fullBox">
+
+        <div id="passwordAndCopy">
+            <span id="password">
+                <p>12234</p>
+            </span>
+            <span id="copyButton">
+                <p>copy password image</p>
+            </span>
+        </div>
+
+        <div id="generatorBox">
+
+            <form id="passwordOptions">
+                <span id="characterLength">
+                    <p>Character Length</p>
+                </span>
+
+                <span id="characterLengthNumber">
+                    <p>12</p>
+                </span>
+
+                <input type="range" min="1" max="50" value="25" class="slider" id="characterRangeSlider"><br>
+
+                <input type="checkbox" id="upperCase" name="upperCase" value="upperCase">
+                <label for="upperCase">Include Uppercase Letters</label><br>
+
+                <input type="checkbox" id="lowerCase" name="lowerCase" value="lowerCase">
+                <label for="lowerCase">Include Lowercase Letters</label><br>
+
+                <input type="checkbox" id="numbers" name="numbers" value="numbers">
+                <label for="numbers">Include Numbers</label><br>
+
+                <input type="checkbox" id="symbols" name="symbols" value="symbols">
+                <label for="symbols">Include Symbols</label><br>
+            </form>
+
+            <div id="passwordStrengthBox">
+                <span id="passwordStrengthWord">Weak</span>
+                <span id="passwordStrengthIcon">
+                    <div class="strengthIndicator"></div>
+                    <div class="strengthIndicator"></div>
+                    <div class="strengthIndicator"></div>
+                    <div class="strengthIndicator"></div>
+                </span>
+            </div>
+
+            <button id="generateButton">Generate</button>
+        </div>
+      </div>
+
+
+        <script src="script.js" async defer></script>
+    </body>
+</html>
