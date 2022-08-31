@@ -1,0 +1,49 @@
+html, body {
+    background-color: grey;
+    font-size: 2vw;
+}
+
+#title {
+    background-color: rgba(115, 185, 9, 0.315);
+}
+
+#passwordAndCopy {
+    background-color: rgba(115, 185, 9, 0.315);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: fit-content;
+    margin: auto;
+}
+
+
+#fullBox {
+    background-color: rgba(115, 185, 9, 0.315);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    width: fit-content;
+    margin: auto;
+}
+
+#slideAndNumber {
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+}
+
+#passwordStrengthIcon {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 30%;
+    float: right;
+}
+
+.strengthIndicator {
+    min-height: 2vw;
+    min-width: 0.7vw;
+    background-color: rgba(127, 255, 212, 0.356);
+    margin: 2%
+}

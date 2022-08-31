@@ -14,16 +14,16 @@
         <h3>Password Generator</h3>
       </div>
 
-      <div id="fullBox">
+      <div id="passwordAndCopy">
+        <span id="password">
+            12234
+        </span>
+        <span id="copyButton">
+            copy password image
+        </span>
+    </div>
 
-        <div id="passwordAndCopy">
-            <span id="password">
-                <p>12234</p>
-            </span>
-            <span id="copyButton">
-                <p>copy password image</p>
-            </span>
-        </div>
+      <div id="fullBox">
 
         <div id="generatorBox">
 
@@ -32,11 +32,14 @@
                     <p>Character Length</p>
                 </span>
 
-                <span id="characterLengthNumber">
-                    <p>12</p>
-                </span>
-
-                <input type="range" min="1" max="50" value="25" class="slider" id="characterRangeSlider"><br>
+                <div id="slideAndNumber">
+                    <span id="characterLengthNumber">
+                        12
+                    </span>
+    
+                    <input type="range" min="1" max="50" value="25" class="slider" id="characterRangeSlider"><br>
+                </div>
+                
 
                 <input type="checkbox" id="upperCase" name="upperCase" value="upperCase">
                 <label for="upperCase">Include Uppercase Letters</label><br>
@@ -61,7 +64,7 @@
                 </span>
             </div>
 
-            <button id="generateButton">Generate</button>
+            <button id="generateButton" onclick="generatePassword()">Generate</button>
         </div>
       </div>
 
