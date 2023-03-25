@@ -1,6 +1,9 @@
 html, body {
     background-color: grey;
     font-size: 2vw;
+    font-weight: bold;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 #title {
@@ -11,39 +14,111 @@ html, body {
     background-color: rgba(115, 185, 9, 0.315);
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    width: fit-content;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 50vw;
+    height: 2rem;
     margin: auto;
+    /* margin-top: 3%; */
 }
 
+#password {
+    margin: auto;
+    margin-left: 3%;
+}
+
+#copyButton {
+    margin: 2% 2% 0 0;
+    min-height: 3vh;
+    min-width: 2vw;
+}
 
 #fullBox {
     background-color: rgba(115, 185, 9, 0.315);
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-    width: fit-content;
+    width: 45vw;
     margin: auto;
+    margin-top: 1%;
+    height: min-content;
+    
+}
+
+#passwordOptions {
+    margin: 4%;
+    font-size: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+
+input {
+    accent-color: black;
+}
+
+input:hover:not(#characterRangeSlider) {
+    box-shadow: 0px 0px 20px;
+}
+
+input:hover, label:hover, img {
+    cursor: pointer;
+}
+
+#passwordOptions div {
+    margin: 2%;
+}
+
+#characterRangeSlider {
+    width: 95%;
 }
 
 #slideAndNumber {
     display: flex;
     flex-direction: row;
     height: 10%;
+    width: 100%;
+}
+
+#passwordStrengthBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgba(16, 78, 0, 0.575);
+    height: 2rem;
+    margin: 5%;
+}
+
+#passwordStrengthWord {
+    width: 60%;
+    margin-top: 2%;
 }
 
 #passwordStrengthIcon {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 30%;
-    float: right;
+    width: 20%;
 }
 
 .strengthIndicator {
-    min-height: 2vw;
+    min-height: 2.3vw;
     min-width: 0.7vw;
-    background-color: rgba(127, 255, 212, 0.356);
-    margin: 2%
+    background-color: grey;
+    margin: 10% 7% 10% 2%;
+}
+
+#generateButton {
+    height: 2rem;
+    width: 90%;
+    margin: 0 0 5% 5%;
+    background-color: rgba(16, 78, 0, 0.575);
+    border: 0;
+    font-size: larger;
+}
+
+#generateButton:hover {
+    background-color: rgba(16, 78, 0, 0.801);
+    box-shadow: 0px 0px 20px;
+    cursor: pointer;
 }

@@ -6,26 +6,27 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
 
-      <div id="title">
-        <h3>Password Generator</h3>
-      </div>
-
       <div id="passwordAndCopy">
         <span id="password">
-            12234
+            Your Password Here
         </span>
         <span id="copyButton">
-            copy password image
+            <img src="./images/copy-icon.svg" onclick="copyElementText()">
         </span>
-    </div>
+        </div>
 
       <div id="fullBox">
 
-        <div id="generatorBox">
+        
+
+       
 
             <form id="passwordOptions">
                 <span id="characterLength">
@@ -34,38 +35,48 @@
 
                 <div id="slideAndNumber">
                     <span id="characterLengthNumber">
-                        12
+                        0
                     </span>
-    
-                    <input type="range" min="1" max="50" value="25" class="slider" id="characterRangeSlider"><br>
+                    
+                    <input type="range" min="1" max="35" value="25" class="slider" id="characterRangeSlider"><br>
+                    
+                   
                 </div>
                 
-
-                <input type="checkbox" id="upperCase" name="upperCase" value="upperCase">
-                <label for="upperCase">Include Uppercase Letters</label><br>
-
-                <input type="checkbox" id="lowerCase" name="lowerCase" value="lowerCase">
-                <label for="lowerCase">Include Lowercase Letters</label><br>
-
-                <input type="checkbox" id="numbers" name="numbers" value="numbers">
-                <label for="numbers">Include Numbers</label><br>
-
-                <input type="checkbox" id="symbols" name="symbols" value="symbols">
-                <label for="symbols">Include Symbols</label><br>
+                <div>
+                    <input type="checkbox" id="upperCase" name="upperCase" value="upperCase">
+                    <label for="upperCase">Include Uppercase Letters</label><br>
+                </div>
+                
+                <div>
+                    <input type="checkbox" id="lowerCase" name="lowerCase" value="lowerCase">
+                    <label for="lowerCase">Include Lowercase Letters</label><br>
+                </div>
+                
+                <div>
+                    <input type="checkbox" id="numbers" name="numbers" value="numbers">
+                    <label for="numbers">Include Numbers</label><br>
+                </div>
+                
+                <div>
+                    <input type="checkbox" id="symbols" name="symbols" value="symbols">
+                    <label for="symbols">Include Symbols</label><br>
+                </div>
+               
             </form>
 
             <div id="passwordStrengthBox">
-                <span id="passwordStrengthWord">Weak</span>
-                <span id="passwordStrengthIcon">
-                    <div class="strengthIndicator"></div>
-                    <div class="strengthIndicator"></div>
-                    <div class="strengthIndicator"></div>
-                    <div class="strengthIndicator"></div>
-                </span>
+                <span id="passwordStrengthWord">Password Strength</span>
+                <div id="passwordStrengthIcon">
+                    <div id="indicator1" class="strengthIndicator"></div>
+                    <div id="indicator2" class="strengthIndicator"></div>
+                    <div id="indicator3" class="strengthIndicator"></div>
+                    <div id="indicator4" class="strengthIndicator"></div>
+                </div>
             </div>
 
             <button id="generateButton" onclick="generatePassword()">Generate</button>
-        </div>
+      
       </div>
 
 

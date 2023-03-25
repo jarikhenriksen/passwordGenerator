@@ -2,11 +2,13 @@
 let slider = document.getElementById('characterRangeSlider')
 let sliderValue = document.getElementById('characterLengthNumber')
 
-// sliderValue.innerText = slider.value
 
 slider.oninput = function() {
+
     
     sliderValue.innerText = this.value
+    strengthIndicatorColour(sliderValue.innerText)
+  
 }
 
 
@@ -45,6 +47,53 @@ function generatePassword() {
 
     document.getElementById('password').innerText = password
 
+}
+
+function strengthIndicatorColour(numOfCharacters) { //this gets called when slider is changed, takes current slider value as argument
+
+    let bars = document.getElementsByClassName('strengthIndicator')
+    let word = document.getElementById('passwordStrengthWord')
+    let x = parseInt(numOfCharacters)
+
+
+    switch (true) {
+        case (x<5):
+            word.innerText = 'Weak'
+            for(let i=0; i<bars.length; i++) {
+                bars[i].style.backgroundColor = 'red'
+            }
+            break;
+        case ((x>6) && (x<15)):
+            word.innerText = 'Better'
+            for(let i=0; i<bars.length; i++) {
+                bars[i].style.backgroundColor = 'orange'
+            }
+            break;
+        case ((x>16) && (x<25)):
+            word.innerText = 'Strong'
+            for(let i=0; i<bars.length; i++) {
+                bars[i].style.backgroundColor = 'yellow'
+            }
+            break;
+        case ((x>25)):
+            word.innerText = 'Unbreakable!'
+            for(let i=0; i<bars.length; i++) {
+                bars[i].style.backgroundColor = 'blue'
+            }
+            break
+    }
+}
+
+function copyElementText() {
+    let text = document.getElementById('password').innerText;
+    let elem = document.createElement("textarea");
+    document.body.appendChild(elem);
+    elem.value = text;
+    elem.select();
+    document.execCommand("copy");
+    document.body.removeChild(elem);
+
+    alert(text)
 }
 
 
